@@ -1,0 +1,61 @@
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  /* ... variabel warna kamu tetap sama ... */
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  /* ... dsb ... */
+}
+
+/* 1. Reset Global - PENTING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* 2. Perbaikan pada #root */
+#root {
+  /* HAPUS width: 1126px agar bisa full-width */
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  /* HAPUS border-inline agar tidak ada garis di pinggir layar */
+  border-inline: none;
+}
+
+/* 3. Gunakan Container untuk konten selain Hero */
+/* Gunakan class ini di Beranda.jsx untuk membungkus teks agar tidak terlalu lebar */
+.content-container {
+  width: 1126px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* 4. Tipografi (Rapikan sedikit) */
+h1 {
+  font-family: var(--heading);
+  font-size: 56px;
+  font-weight: 500;
+  color: var(--text-h);
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}

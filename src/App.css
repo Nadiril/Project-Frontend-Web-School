@@ -1,0 +1,560 @@
+/* Container Utama Hero */
+.hero-section {
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center; /* Menengahkan teks secara vertikal */
+}
+
+/* Background & Gambar */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Supaya berada di belakang teks */
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Gambar tetap proporsional memenuhi area */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradient dari gelap ke transparan */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+
+/* Konten Teks */
+.hero-container {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Sesuaikan dengan CSS yang sudah kamu punya sebelumnya untuk tombol dll */
+.hero-section {
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  /* Menggunakan gradient gelap transparan agar foto tetap terlihat segar */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("/sekolah.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title span {
+  color: #2ecc71; /* Warna hijau emerald untuk aksen */
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-divider {
+  width: 80px;
+  height: 4px;
+  background-color: #2ecc71;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.hero-tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+/* Tombol Custom */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary-custom {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-outline-custom {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+  background-color: #27ae60;
+  transform: translateY(-3px);
+}
+
+/* Responsif HP */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
+/* Styling Header Khusus Halaman Tentang */
+.about-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-header h1 {
+  color: var(--text-h);
+  margin-bottom: 10px;
+}
+
+/* Card Styling agar terlihat premium */
+.card {
+  border-radius: 15px;
+  background: var(--bg);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.text-success {
+  color: #2ecc71 !important; /* Hijau senada dengan Beranda */
+}
+
+/* Responsivitas untuk teks di HP */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2.5rem;
+  }
+}
+/* --- FOOTER STYLING --- */
+.footer-section {
+  background-color: #0b1120; /* Lebih gelap dari bg-dark utama */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--emerald);
+  padding-left: 5px;
+}
+
+.social-icon {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  color: var(--emerald);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  background-color: #070b14;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-emerald {
+  color: #10b981 !important;
+}
+/* Pastikan seluruh aplikasi setinggi layar */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Bagian konten akan mengambil sisa ruang yang ada */
+.main-content {
+  flex: 1;
+}
+.mb-1,
+.mb-2 {
+  color: #fff;
+}
+/* Styling khusus halaman SPMB */
+.spmb-page {
+  background-color: #f8f9fa; /* Warna background abu-abu sangat muda agar poster menonjol */
+  min-height: 100vh;
+}
+
+.spmb-container {
+  display: flex;
+  justify-content: center; /* Poster ke tengah secara horizontal */
+  align-items: center; /* Poster ke tengah secara vertikal (opsional) */
+  padding: 20px; /* Jarak agar poster tidak nempel ke pinggir layar */
+  margin-top: 20px;
+}
+
+.poster-img {
+  max-width: 100%; /* Agar gambar tidak melebihi lebar layar HP */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 12px; /* Membuat sudut gambar sedikit melengkung agar modern */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Memberi efek bayangan halus */
+  border: 4px solid #ffffff; /* Frame putih tipis seperti foto asli */
+}
+
+/* Responsif untuk layar komputer/laptop */
+@media (min-width: 768px) {
+  .poster-img {
+    max-width: 600px; /* Batasi lebar maksimal di laptop agar tidak terlalu raksasa */
+  }
+}
+/* Layout Utama */
+.spmb-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f4f7f6;
+  min-height: 90vh;
+}
+
+.spmb-container {
+  display: flex;
+  flex-direction: row; /* Membuat konten berjejer ke samping */
+  background: white;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Bagian Kiri (Gambar) */
+.spmb-left {
+  flex: 1; /* Mengambil 50% ruang */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9ecef;
+}
+
+.poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Agar gambar memenuhi area tanpa gepeng */
+}
+
+/* Bagian Kanan (Informasi) */
+.spmb-right {
+  flex: 1; /* Mengambil 50% ruang */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-spmb {
+  font-size: 2rem;
+
+  color: #10b981;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.info-section {
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.info-section p {
+  margin: 8px 0;
+  color: #333;
+}
+
+/* Tombol Daftar */
+.btn-daftar {
+  background-color: #10b981; /* Warna sesuai branding logo kamu */
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.1rem;
+}
+
+.btn-daftar:hover {
+  background-color: #05620c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+  .spmb-container {
+    flex-direction: column; /* Gambar di atas, teks di bawah saat di HP */
+  }
+  .spmb-left,
+  .spmb-right {
+    flex: none;
+    width: 100%;
+  }
+}
+/* Container Utama Info */
+.info-section {
+  background-color: #ffffff; /* Background putih bersih */
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 5px solid #02152a; /* Aksen garis tebal di kiri sesuai warna branding */
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Bayangan halus */
+}
+
+/* Container Utama untuk menengahkan konten */
+.kontak-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Memastikan tinggi halaman penuh */
+}
+
+.kontak-wrapper {
+  flex: 1; /* Mengambil sisa ruang antara Navbar dan Footer */
+  display: flex;
+  justify-content: center; /* Menengahkan secara horizontal */
+  align-items: center; /* Menengahkan secara vertikal */
+  padding: 40px 20px;
+}
+
+/* Box info section yang sudah kamu buat sebelumnya */
+.info-section {
+  background-color: #ffffff;
+  padding: 30px 40px; /* Diperlebar sedikit agar lebih elegan */
+  border-radius: 12px;
+  border-left: 6px solid #02152a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Bayangan lebih halus */
+  max-width: 600px; /* Membatasi lebar agar tidak terlalu melar */
+  width: 100%;
+}
+
+.info-section p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 1.1rem; /* Ukuran font diperbesar sedikit */
+  color: #333;
+}
+
+.info-section p strong {
+  color: #02152a;
+  min-width: 160px; /* Menjaga teks sebelah kanan tetap sejajar */
+  display: inline-block;
+}
+.ekskul-page {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.ekskul-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.ekskul-title {
+  font-size: 2.5rem;
+  color: #02152a;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.ekskul-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+/* Grid layout untuk kartu ekskul */
+.ekskul-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* Styling kartu */
+.ekskul-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-bottom: 4px solid transparent;
+}
+
+.ekskul-card:hover {
+  transform: translateY(-8px);
+  border-bottom: 4px solid #02152a;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.ekskul-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.ekskul-card h3 {
+  color: #02152a;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.ekskul-card p {
+  color: #777;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* --- NAVBAR STYLING --- */
+.custom-navbar {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.navbar-brand-custom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none !important;
+  font-weight: 700;
+  color: #02152a !important;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-brand-custom:hover {
+  opacity: 0.8;
+}
+
+.brand-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-text {
+  color: #02152a;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.custom-navbar .nav-link {
+  color: #333 !important;
+  font-weight: 500;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #2ecc71 !important;
+}
+
+.custom-navbar .nav-link.active {
+  color: #2ecc71 !important;
+  border-bottom: 2px solid #2ecc71;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  .custom-navbar {
+    padding: 10px 0;
+  }
+
+  .brand-logo {
+    height: 40px;
+  }
+
+  .brand-text {
+    font-size: 1.1rem;
+  }
+
+  .custom-navbar .nav-link {
+    margin-left: 0;
+    padding: 10px 0 !important;
+  }
+}
+.text-muted.small {
+  color: #fff;
+}
